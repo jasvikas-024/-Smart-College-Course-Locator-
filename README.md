@@ -48,7 +48,7 @@ The **Smart College Course Locator** is a web-based tool designed to help studen
 
 ## 👤 Author
 
-**Jas Vika**
+**JasVika**
 
 Feel free to ⭐ the repo and contribute if you'd like to enhance the project!
 
