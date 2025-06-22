@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Guide - Select Course & Location</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Education Guide</h1>
+        <form id="selectionForm">
+            <label for="course">Select Course:</label>
+            <select id="course" name="course">
+                <option value="bsc_cs">B.Sc Computer Science</option>
+                <option value="bsc_math">B.Sc Mathematics</option>
+                <option value="ba_english">B.A English</option>
+                <option value="bsc_ai_ds">B.Sc AI DS</option>
+                <!-- Add more courses as needed -->
+            </select>
+
+            <label for="state">Select State:</label>
+            <select id="state" name="state">
+                <option value="tamilnadu">Tamil Nadu</option>
+                <option value="karnataka">Karnataka</option>
+                <option value="maharashtra">Maharashtra</option>
+                <!-- Add more states as needed -->
+            </select>
+
+            <label for="district">Select District:</label>
+            <select id="district" name="district">
+                <option value="coimbatore">Coimbatore</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="mumbai">Mumbai</option>
+                <!-- Add more districts as needed -->
+            </select>
+
+            <button type="submit">Find Colleges</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('selectionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const course = document.getElementById('course').value;
+            const state = document.getElementById('state').value;
+            const district = document.getElementById('district').value;
+            
+            // Redirect to colleges.html with query parameters
+            const queryParams = `?course=${course}&state=${state}&district=${district}`;
+            window.location.href = `colleges.html${queryParams}`;
+        });
+    </script>
+</body>
+</html>
